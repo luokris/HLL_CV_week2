@@ -1,5 +1,6 @@
 #include<iostream>
 #include<opencv2/opencv.hpp>
+#include <ctime>
 using namespace cv;
 using namespace std;
 
@@ -37,6 +38,10 @@ void myfilter(int filter_size, Mat& image_input, Mat& image_output)
 //主函数
 int main()
 {
+    time_t begin,end;
+	double ret;
+	begin=clock();
+    
     Mat image, image_output2;   //定义输入图像，输出图像
     image = imread("D:\\week2\\lena.jpg");  //读取图像；
     if (image.empty())
@@ -52,6 +57,12 @@ int main()
 
     waitKey(0);  //暂停，保持图像显示，等待按键结束
     return 0;
+    
+    end = clock();
+	ret = double(end - begin) / CLOCKS_PER_SEC;
+	cout << endl;
+	cout << "runtime:   " << ret << endl;
+
 }
 
 
