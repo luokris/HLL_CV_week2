@@ -1,5 +1,6 @@
 #include<opencv.hpp>
 #include<iostream>
+#include <ctime>
 using namespace std;
 using namespace cv;
 
@@ -19,6 +20,10 @@ void grayImageShow(cv::Mat &input, cv::Mat &output)
 
 int main(void)
 {
+    time_t begin,end;
+	double ret;
+	begin=clock();
+    
     cv::Mat src, gray, dst;
 
     gray=cv::imread("D:/week2/Lena.jpg", cv::IMREAD_GRAYSCALE); //由imread()得到的灰度图像
@@ -31,4 +36,9 @@ int main(void)
     waitKey(0);
 
     return 0;
+    
+    end = clock();
+	ret = double(end - begin) / CLOCKS_PER_SEC;
+	cout << endl;
+	cout << "runtime:   " << ret << endl;
 }
