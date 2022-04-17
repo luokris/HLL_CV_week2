@@ -4,7 +4,7 @@
 using namespace std;
 using namespace cv;
 
-//公式：Gray = 0.2989*R + 0.5870*G + 0.1140*B
+//灰度转换公式：Gray = 0.2989*R + 0.5870*G + 0.1140*B
 
 void grayImageShow(cv::Mat &input, cv::Mat &output)
 {
@@ -18,9 +18,10 @@ void grayImageShow(cv::Mat &input, cv::Mat &output)
     cv::imshow("dst", output);
 }
 
+//主函数
 int main(void)
 {
-    time_t begin,end;
+    time_t begin,end; //计时
 	double ret;
 	begin=clock();
     
