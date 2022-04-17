@@ -34,7 +34,7 @@ void drawLIne(Mat &img,//要标记的图像
 
 //主函数
 int main(){
-    time_t begin,end;
+    time_t begin,end; //计时
         double ret;
         begin=clock();
     Mat img=imread("D:\\week2\\lena.jpg");
