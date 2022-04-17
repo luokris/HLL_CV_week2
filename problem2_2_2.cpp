@@ -38,7 +38,7 @@ void myfilter(int filter_size, Mat& image_input, Mat& image_output)
 //主函数
 int main()
 {
-    time_t begin,end;
+    time_t begin,end; //计时
 	double ret;
 	begin=clock();
     
